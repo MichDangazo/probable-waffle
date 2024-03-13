@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <title>Basic Layout Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+
+            display: grid;
+
+            grid-template-columns: 60% 10% 30%;
+            grid-template-rows: 25% 10% 25% 25% 15%;
+
+            gap: 10px;
+
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: contents;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .container div {
+            padding: 10px;
+            border: 2px solid #000000;
+        }
+
+        .header {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .nav {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .content-large {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+
+        .aside {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        .aside2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        .aside3 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+        .footer{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">BANNER</div>
+        <div class="nav">NAVIGATION LINKS</div>
+        <div class="content-large">MAIN CONTENT</div>
+        <div class="box">
+            <div class="aside">PICTURE</div>
+            <div class="aside2">ABOUT ME BLURB</div>
+            <div class="aside3">RECENT TWEETS</div>
+        </div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
