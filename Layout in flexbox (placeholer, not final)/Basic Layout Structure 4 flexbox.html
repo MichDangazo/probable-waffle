@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>Basic Layout Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 10px;
+
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .container div {
+            padding: 10px;
+            border: 2px solid #000000;
+        }
+
+        .header,
+        .nav,
+        .footer {
+            flex: 0 0 25%; /* Setting the height for these items to 25% */
+        }
+
+        .content-large {
+            flex: 1; /* The main content takes up remaining space */
+        }
+
+        .aside,
+        .aside2,
+        .aside3 {
+            flex: 1; /* Side content takes up equal space */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">BANNER</div>
+        <div class="nav">NAVIGATION LINKS</div>
+        <div class="content-large">MAIN CONTENT</div>
+        <div class="box">
+            <div class="aside">PICTURE</div>
+            <div class="aside2">ABOUT ME BLURB</div>
+            <div class="aside3">RECENT TWEETS</div>
+        </div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>

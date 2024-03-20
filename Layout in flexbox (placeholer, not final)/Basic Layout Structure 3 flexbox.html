@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Basic Layout Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 10px;
+
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .container div {
+            padding: 10px;
+            border: 2px solid #000000;
+        }
+
+        .header,
+        .nav,
+        .footer {
+            flex: 0 0 20%; /* Setting the height for these items to 20% */
+        }
+
+        .aside {
+            flex: 0 0 25%; /* Setting the height for side content to 25% */
+        }
+
+        .content-large {
+            flex: 1; /* The main content takes up remaining space */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="nav">Navigation</div>
+        <div class="aside">Side Content</div>
+        <div class="content-large">Main Content</div>
+        <div class="aside">Side Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
